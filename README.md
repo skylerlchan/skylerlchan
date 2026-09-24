@@ -33,8 +33,10 @@ Private for now: **Kalshi 15M**, a live systematic trading system on Kalshi's 15
 ## Recent activity
 
 <!--START_SECTION:activity-->
-1. ❌ Closed PR [#1](https://github.com/skylerlchan/v0-hedge-fund-dashboard-2/pull/1) in [skylerlchan/v0-hedge-fund-dashboard-2](https://github.com/skylerlchan/v0-hedge-fund-dashboard-2)
-2. 🗣 Commented on [#1](https://github.com/skylerlchan/v0-hedge-fund-dashboard-2/pull/1#issuecomment-5455054899) in [skylerlchan/v0-hedge-fund-dashboard-2](https://github.com/skylerlchan/v0-hedge-fund-dashboard-2)
+- Sep 19: pushed 0 commits to [skylerlchan/Robotics](https://github.com/skylerlchan/Robotics)
+- Sep 12: pushed 0 commits to [skylerlchan/Robotics](https://github.com/skylerlchan/Robotics)
+- Jun 4: made [skylerlchan/puck](https://github.com/skylerlchan/puck) public
+- Apr 20: made [skylerlchan/Robotics](https://github.com/skylerlchan/Robotics) public
 <!--END_SECTION:activity-->
 
 ## Elsewhere
