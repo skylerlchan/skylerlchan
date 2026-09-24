@@ -26,7 +26,7 @@ jobs:
               d, repo, t, p = e['created_at'][:10], e['repo']['name'], e['type'], e.get('payload', {})
               link = f"[{repo}](https://github.com/{repo})"
               if t == 'PushEvent':
-                  pushes[(d, repo)] = pushes.get((d, repo), 0) + len(p.get('commits', []))
+                  pushes[(d, repo)] = True
               elif t == 'CreateEvent' and p.get('ref_type') == 'repository':
                   rows.append((d, f"created {link}"))
               elif t == 'PublicEvent':
@@ -38,8 +38,8 @@ jobs:
               elif t == 'ReleaseEvent':
                   r = p['release']
                   rows.append((d, f"released [{r.get('name') or r['tag_name']}]({r['html_url']}) in {link}"))
-          for (d, repo), n in pushes.items():
-              rows.append((d, f"pushed {n} commit{'s' if n != 1 else ''} to [{repo}](https://github.com/{repo})"))
+          for (d, repo) in pushes:
+              rows.append((d, f"pushed to [{repo}](https://github.com/{repo})"))
           rows.sort(key=lambda r: r[0], reverse=True)
           lines = [f"- {datetime.date.fromisoformat(d).strftime('%b %-d')}: {txt}" for d, txt in rows[:8]]
           body = "\n".join(lines) if lines else "- Quiet week on the public side."
