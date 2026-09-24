@@ -33,8 +33,9 @@ Private for now: **Kalshi 15M**, a live systematic trading system on Kalshi's 15
 ## Recent activity
 
 <!--START_SECTION:activity-->
-- Sep 19: pushed 0 commits to [skylerlchan/Robotics](https://github.com/skylerlchan/Robotics)
-- Sep 12: pushed 0 commits to [skylerlchan/Robotics](https://github.com/skylerlchan/Robotics)
+- Sep 24: pushed to [skylerlchan/skylerlchan](https://github.com/skylerlchan/skylerlchan)
+- Sep 19: pushed to [skylerlchan/Robotics](https://github.com/skylerlchan/Robotics)
+- Sep 12: pushed to [skylerlchan/Robotics](https://github.com/skylerlchan/Robotics)
 - Jun 4: made [skylerlchan/puck](https://github.com/skylerlchan/puck) public
 - Apr 20: made [skylerlchan/Robotics](https://github.com/skylerlchan/Robotics) public
 <!--END_SECTION:activity-->
