@@ -13,11 +13,44 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: jamesgeorge007/github-activity-readme@master
+      - name: Build the list from public events
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          COMMIT_MSG: "chore: update recent activity"
-          MAX_LINES: 8
-          COMMIT_NAME: Skyler Chan
-          COMMIT_EMAIL: 156445167+skylerlchan@users.noreply.github.com
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api "users/skylerlchan/events/public?per_page=100" > events.json
+          python3 - <<'PY'
+          import json, datetime, re
+          ev = json.load(open('events.json'))
+          rows, pushes = [], {}
+          for e in ev:
+              d, repo, t, p = e['created_at'][:10], e['repo']['name'], e['type'], e.get('payload', {})
+              link = f"[{repo}](https://github.com/{repo})"
+              if t == 'PushEvent':
+                  pushes[(d, repo)] = pushes.get((d, repo), 0) + len(p.get('commits', []))
+              elif t == 'CreateEvent' and p.get('ref_type') == 'repository':
+                  rows.append((d, f"created {link}"))
+              elif t == 'PublicEvent':
+                  rows.append((d, f"made {link} public"))
+              elif t == 'PullRequestEvent':
+                  pr, a = p['pull_request'], p['action']
+                  if a == 'opened' or (a == 'closed' and pr.get('merged')):
+                      rows.append((d, f"{'opened' if a == 'opened' else 'merged'} [#{pr['number']}]({pr['html_url']}) in {link}: {pr['title']}"))
+              elif t == 'ReleaseEvent':
+                  r = p['release']
+                  rows.append((d, f"released [{r.get('name') or r['tag_name']}]({r['html_url']}) in {link}"))
+          for (d, repo), n in pushes.items():
+              rows.append((d, f"pushed {n} commit{'s' if n != 1 else ''} to [{repo}](https://github.com/{repo})"))
+          rows.sort(key=lambda r: r[0], reverse=True)
+          lines = [f"- {datetime.date.fromisoformat(d).strftime('%b %-d')}: {txt}" for d, txt in rows[:8]]
+          body = "\n".join(lines) if lines else "- Quiet week on the public side."
+          s = open('README.md').read()
+          new = re.sub(r"(<!--START_SECTION:activity-->)(.*?)(<!--END_SECTION:activity-->)", lambda m: f"{m.group(1)}\n{body}\n{m.group(3)}", s, flags=re.S)
+          open('README.md', 'w').write(new)
+          print(body)
+          PY
+      - name: Commit if changed
+        run: |
+          git config user.name "Skyler Chan"
+          git config user.email "156445167+skylerlchan@users.noreply.github.com"
+          git add README.md
+          git diff --cached --quiet || (git commit -m "chore: update recent activity" && git push)
