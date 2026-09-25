@@ -1,6 +1,6 @@
 # Skyler Chan
 
-Founding engineer at Multiplier (YC P26) through Sep 2026, a VS Code fork with embedded AI agents for hedge-fund analysts. Princeton ORFE + CS, class of 2028. I build tools that let people hand real work to AI agents and stay in control, and I run a robot teleoperation lab.
+Princeton ORFE + CS, class of 2028. I build tools that let people hand real work to AI agents and stay in control, and I run a robot teleoperation lab.
 
 **Now:** [Exahuman](https://exahuman.io), a robot teleoperation lab at the Princeton Robotics Club. Five people, LeRobot SO-101 arms, one question: how does a remote operator stay in control when the link has latency? On the side: short-horizon prediction-market research on Kalshi and Polymarket.
 
@@ -14,16 +14,8 @@ Founding engineer at Multiplier (YC P26) through Sep 2026, a VS Code fork with e
 | [Robotics](https://github.com/skylerlchan/Robotics) | The lab's working repo: AlohaMini bring-up on SO-101 arms, a put-away benchmark, MuJoCo soft-gripper sims, teleoperation research. | Python, LeRobot, MuJoCo |
 | [Last_Curb](https://github.com/skylerlchan/Last_Curb) | Real-time curbside parking detection from public NYC traffic cameras. YOLO plus temporal clustering discovers spots and tracks occupancy. | Python, YOLO, DBSCAN |
 | [Basis strategy](https://github.com/skylerlchan/Structured-Basis-Divergence-Arbitrage) | Backtest of a delta-neutral BTC perpetual funding strategy with threshold rebalancing and full cost modeling. | Python, pandas |
-| [claude-lessons](https://github.com/skylerlchan/claude-lessons) | Two teaching decks, a prompt pack and two installable skills for people who use Claude Code every day. | HTML, Markdown |
 
 Private for now: **Kalshi 15M**, a live systematic trading system on Kalshi's 15-minute crypto markets and the research that produced it. **Today**, a macOS live-wallpaper and menu-bar dashboard (sleep, spend, Claude tokens, applications sent) that costs 3% of one core. **exahuman**, an agentic to-do list where Claude Code or Codex does the work and only you can mark it done.
-
-## At Multiplier (Jan to Sep 2026)
-
-- Built the AI chat client from zero on the Claude Agent SDK: 3,500+ analyst work sessions, 72% completed by the agent autonomously
-- Built the agent-collaborative markdown editor that renders 98% of analyst document opens
-- Shipped scheduled-automation VMs on Azure for client compliance and data isolation
-- Owned release engineering and CI/CD: release success 63% to 96%, update delivery 25 to 13 minutes, weekly releases to same-day
 
 ## Papers
 
