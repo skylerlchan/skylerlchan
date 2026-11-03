@@ -25,14 +25,8 @@ Private for now: **Kalshi 15M**, a live systematic trading system on Kalshi's 15
 ## Recent activity
 
 <!--START_SECTION:activity-->
-- Sep 28: made [gulpyai/gulpy](https://github.com/gulpyai/gulpy) public
-- Sep 28: pushed to [skylerlchan/personal_website](https://github.com/skylerlchan/personal_website)
-- Sep 25: pushed to [skylerlchan/skylerlchan](https://github.com/skylerlchan/skylerlchan)
-- Sep 24: pushed to [skylerlchan/Robotics](https://github.com/skylerlchan/Robotics)
-- Sep 24: pushed to [skylerlchan/skylerlchan](https://github.com/skylerlchan/skylerlchan)
-- Sep 24: pushed to [skylerlchan/Structured-Basis-Divergence-Arbitrage](https://github.com/skylerlchan/Structured-Basis-Divergence-Arbitrage)
-- Sep 19: pushed to [skylerlchan/Robotics](https://github.com/skylerlchan/Robotics)
-- Sep 12: pushed to [skylerlchan/Robotics](https://github.com/skylerlchan/Robotics)
+- Oct 31: pushed to [skylerlchan/alohamini-teleop](https://github.com/skylerlchan/alohamini-teleop)
+- Oct 4: pushed to [gulpyai/gulpy](https://github.com/gulpyai/gulpy)
 <!--END_SECTION:activity-->
 
 ## Elsewhere
