@@ -26,7 +26,6 @@ Private for now: **Kalshi 15M**, a live systematic trading system on Kalshi's 15
 
 <!--START_SECTION:activity-->
 - Oct 31: pushed to [skylerlchan/alohamini-teleop](https://github.com/skylerlchan/alohamini-teleop)
-- Oct 4: pushed to [gulpyai/gulpy](https://github.com/gulpyai/gulpy)
 <!--END_SECTION:activity-->
 
 ## Elsewhere
