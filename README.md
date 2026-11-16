@@ -25,6 +25,7 @@ Private for now: **Kalshi 15M**, a live systematic trading system on Kalshi's 15
 ## Recent activity
 
 <!--START_SECTION:activity-->
+- Nov 16: pushed to [skylerlchan/princeton-on-time](https://github.com/skylerlchan/princeton-on-time)
 - Oct 31: pushed to [skylerlchan/alohamini-teleop](https://github.com/skylerlchan/alohamini-teleop)
 <!--END_SECTION:activity-->
 
